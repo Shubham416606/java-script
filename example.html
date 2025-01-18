@@ -1,0 +1,27 @@
+<!-- write javaScript to change text of p tag to upper and lower case bu using 2 buttons-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function upp() {
+            cl = document.getElementsByClassName("xy")
+            cl[0].style.textTransform = "upperCase"
+        }
+        function low() {
+            cl = document.getElementsByClassName("xy")
+            cl[0].style.textTransform = "lowerCase"
+        }
+    </script>
+</head>
+
+<body>
+    <p class="xy">Hello</p>
+    <input type="button" onclick="low()" value="Lower">
+    <input type="button" onclick="upp()" value="Upper">
+</body>
+
+</html>

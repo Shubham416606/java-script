@@ -1,0 +1,30 @@
+<!-- write javaScript to change text of p tag to upper and lower case bu using 2 buttons-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mup(e) {
+            e.style.backgroundColor = "yellow"
+            e.innerHTML = "click"
+        }
+        function mdown(e) {
+            e.style.backgroundColor = "pink"
+            e.innerHTML = "Release"
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div onmousedown="mdown(this)" onmouseup="mup(this)" style="background-color: rgb(221, 26, 26); height: 200px; width: 200px;">
+        click
+    </div>
+
+</body>
+
+</html>

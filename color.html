@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function xyz() {
+            cl = document.getElementsByClassName("xy")
+            for (i = 0; i < cl.length; i++) {
+                cl[i].innerHTML="changedtext"; 
+                cl[i].style.color = "red"; 
+                cl[i].style.backgroundColor = "blue"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p class="xy">Hello</p>
+    <p class="xy">Hello1</p>
+    <p class="xy">Hello2</p>
+    <p class="xy">Hello3</p>
+    <p class="xy">Hello4</p>                                                                                 
+    <input type="button" onclick="xyz()" value="click!">
+</body>
+
+</html>
