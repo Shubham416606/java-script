@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <script>
+        function fun() {
+            pat=/^\d{10}$/
+            u=document.getElementById("ti").value
+            if (pat.test(u)) {
+                alert("Perfect")
+            }
+            else{
+                alert("does not match")
+            }
+        }
+        </script>
+</head>
+<body>
+    <input type="text" id="ti">
+    <input type="submit" onclick="fun()">
+</body>
+</html>

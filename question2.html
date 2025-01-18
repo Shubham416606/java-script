@@ -1,0 +1,38 @@
+<!--write a javascript so that length of password must be 8 letters and must have special charcters -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+</head>
+
+<body>
+    <h2>Password Validation</h2>
+    <form>
+        Enter Password:
+        <input type="password" id="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+        var password = document.getElementById('password').value;
+        if (password.length != 8) {
+            alert("Password must be 8 characters long.");
+
+        }
+
+        var specialCharPattern = /\W+/;
+        if (!specialCharPattern.test(password)) {
+            alert("Password must contain at least one special character.");
+
+        }
+
+        alert("Password is valid.");
+    </script>
+</body>
+
+</html>

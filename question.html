@@ -1,0 +1,53 @@
+<!-- write a javascript to validate username and password.Password length must be of 6-12 
+ characters and user name should not start with _,@ and any number.Both username and password must not be blank -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Username and Password Validation</title>
+ </head>
+ <body>
+ 
+     <h2>Registration Form</h2>
+     <form id="registrationForm" onsubmit="return validateUsernameAndPassword()">
+         <label for="username">Username:</label><br>
+         <input type="text" id="username" name="username" placeholder="Enter username"><br><br>
+ 
+         <label for="password">Password:</label><br>
+         <input type="password" id="password" name="password" placeholder="Enter password"><br><br>
+ 
+         <input type="submit" value="Submit">
+     </form>
+ 
+     <script>
+         function validateUsernameAndPassword() {
+
+             const username = document.getElementById('username').value;
+             const password = document.getElementById('password').value;
+ 
+             if (!username || !password) {
+                 alert("Username and password cannot be blank.");
+                 return false;
+             }
+ 
+             const usernamecheck = /^[A-Za-z][A-Za-z0-9_@]*$/;
+             if (!usernamecheck.test(username)) {
+                 alert("Username should start with a letter and may contain letters, numbers, or underscores.");
+                 return false;
+             }
+ 
+             if (password.length < 6 || password.length > 12) {
+                 alert("Password must be between 6 and 12 characters.");
+                 return false;
+             }
+ 
+             alert("Username and password are valid.");
+             return true;
+         }
+     </script>
+ 
+ </body>
+ </html>
+ 
