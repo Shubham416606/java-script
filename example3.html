@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Until Birthday</title>
+    <script>
+        function daysUntilBirthday(birthDateStr) {
+            const today = new Date();
+            const birthDate = new Date(birthDateStr);
+            birthDate.setFullYear(today.getFullYear());
+
+            if (today > birthDate) {
+                birthDate.setFullYear(today.getFullYear() + 1);
+            }
+
+            const timeDiff = birthDate - today;
+            return Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        }
+
+        function showDaysLeft() {
+            const daysLeft = daysUntilBirthday(prompt("enter in YYYY-MM-DD"));
+            alert(daysLeft + " days left until your birthday!");
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Birthday Countdown</h1>
+    <input type="button" onclick="showDaysLeft()" value="Click Me!">
+</body>
+</html>

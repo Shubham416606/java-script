@@ -1,36 +1,28 @@
-<!-- write javaScript to change text of p tag to upper and lower case bu using 2 buttons-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function fun(e) {
-            val = e.button
-            switch (val) {
-                case 0: alert("LEFT CLICK!")
-                    break;
-
-                case 1: alert("MIDDLE CLICK!")
-                    break;
-
-                case 2: alert("RIGHT CLICK!")
-                    break;
-
-                default:
-                    break;
+    <title>Example</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        var end=8
+        var value=1
+        for(count=1;count<end+1;count++){
+            if(count==1){
+                document.write(count + " +")
+            }
+            else if(count>1 & count<end){
+            value=value*count
+            document.write(" (x^" +count + "/" + value + ") +")
+            }
+            else{
+            value=value*count
+            document.write(" (x^" +count + "/" + value + ")")
             }
         }
-
+        
     </script>
-</head>
-
-<body>
-    <div style="width: 50%; height: 50%; border: 2px solid pink;" onmousedown="fun(event)">
-        Weeeeeeeeeeeeeeeeeeezzzeeeeeeeeeeeeeee
-    </div>
 </body>
-
 </html>

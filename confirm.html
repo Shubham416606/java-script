@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" language="javaScript">
+        function conf(){
+            ret = confirm("Do you want to Continue ? ")
+            if(ret == true){
+                document.write("User wants to continue")
+                return true;
+            }
+            else{
+                document.write("User does not want TO CONTINUE")
+            }
+            return false;
+        }
+    </script>
+    <input type="button" value="ok" onclick="conf()">
+</body>
+</html>

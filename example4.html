@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pow</title>
+</head>
+
+<body>
+    <script type="text/javascript" language="javaScript">
+        function getVal() {
+            var ret = prompt("enter 2 digit number: ");
+            var one = ret % 10;
+            var two = parseInt(ret / 10)
+
+            document.write(Math.pow(two, one))
+        }
+    </script>
+    <input type="button" value="Clickme" onclick="getVal()">
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pow</title>
+</head>
+
+<body>
+    <script type="text/javascript" language="javaScript">
+        function getVal() {
+            var ret = prompt("enter number: ");
+            var temp = ret
+            var sum = 0
+            while (true) 
+            {
+
+                while (temp != 0) {
+                    var a = temp % 10
+                    sum += a
+                    temp = parseInt(temp / 10)
+                }
+
+                temp=sum
+                
+                if (sum<9) {
+                    break
+                }
+            }
+            document.write(sum)
+        }
+
+    </script>
+    <input type="button" value="Clickme" onclick="getVal()">
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested function</title>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        
+        function hello()
+        {
+            var result
+            result=info("Hetansh","109")
+            document.write(result)
+        }
+        function info(name,rollno)
+        {
+            var fullname
+            fullname = name + rollno
+            return fullname
+        }
+
+    </script>
+    <input type="button" onclick="hello()" value="Click Me!">
+</body>
+</html>
